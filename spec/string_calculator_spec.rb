@@ -23,6 +23,6 @@ describe StringCalculator do
   end
 
   it 'should not accept negative numbers' do
-    expect(calculator.add("12,-2")).to eq("negatives not allowed - -2" )
+    expect{ calculator.add("12,-2") }.to raise_error("negatives not allowed - -2")
   end
 end
