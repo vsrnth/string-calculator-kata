@@ -2,7 +2,7 @@
 
 class StringCalculator
   def add(numbers)
-    number_array = numbers.split(',')
-    0 if number_array.empty?
+    number_array = numbers.split(',').map(&:to_i)
+    number_array.sum
   end
 end
