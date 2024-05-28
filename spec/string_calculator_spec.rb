@@ -21,4 +21,8 @@ describe StringCalculator do
   it 'should return sum of the numbers in string, the delimiters are not passed in a line before the string' do
     expect(calculator.add("12;2")).to eq(14)
   end
+
+  it 'should not accept negative numbers' do
+    expect(calculator.add("12,-2")).to eq("negatives not allowed - -2" )
+  end
 end
