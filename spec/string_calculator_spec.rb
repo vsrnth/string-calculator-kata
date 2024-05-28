@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 require 'rspec'
+require_relative '../src/string_calculator'
 
 describe StringCalculator do
   subject(:calculator) { described_class.new }
