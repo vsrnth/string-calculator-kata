@@ -5,8 +5,7 @@ class StringCalculator
     numbers_array = numbers.scan(/[0-9-]+/).map(&:to_i)
     negative_numbers = list_negative_numbers(numbers_array)
     raise "negatives not allowed - #{negative_numbers}" if negative_numbers
-
-    numbers_array.reduce(0) { |sum, i| sum + i }
+    numbers_array.reduce(0) { |sum, i| i <= 1000 ? sum + i : sum }
   end
 
   private
