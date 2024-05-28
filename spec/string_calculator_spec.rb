@@ -36,4 +36,8 @@ describe StringCalculator do
   it 'should return sum of numbers in string even if multiple delimiters of length longer than one char are present in the string' do
     expect(calculator.add("//[#*][#%]\n1#*2#%3")).to eq(6)
   end
+
+  it 'should ignore numbers greater than 1000 when adding numbers in string ' do
+    expect(calculator.add("1,2,1004,3")).to eq(6)
+  end
 end
