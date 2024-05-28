@@ -24,6 +24,7 @@ describe StringCalculator do
 
   it 'should not accept negative numbers' do
     expect { calculator.add('12,-2') }.to raise_error('negatives not allowed - -2')
+    expect { calculator.add('12,-2,-4') }.to raise_error('negatives not allowed - -2,-4')
   end
 
   it 'should return sum of numbers in a string, irrespective of the length of the delimiters' do
