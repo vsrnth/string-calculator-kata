@@ -29,4 +29,11 @@ describe StringCalculator do
   it 'should return sum of numbers in a string, irrespective of the length of the delimiters' do
     expect(calculator.add("//[***]\n1***2***3")).to eq(6)
   end
+  it 'should return sum of numbers in string even if we have multiple delimiters in the string' do
+    expect(calculator.add("//[*][%]\n1*2%3")).to eq(6)
+  end
+
+  it 'should return sum of numbers in string even if multiple delimiters of length longer than one char are present in the string' do
+    expect(calculator.add("//[#*][#%]\n1#*2#%3")).to eq(6)
+  end
 end
