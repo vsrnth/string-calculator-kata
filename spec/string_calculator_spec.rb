@@ -19,11 +19,11 @@ describe StringCalculator do
   end
 
   it 'should return sum of the numbers in string, the delimiters are not passed in a line before the string' do
-    expect(calculator.add("12;2")).to eq(14)
+    expect(calculator.add('12;2')).to eq(14)
   end
 
   it 'should not accept negative numbers' do
-    expect{ calculator.add("12,-2") }.to raise_error("negatives not allowed - -2")
+    expect { calculator.add('12,-2') }.to raise_error('negatives not allowed - -2')
   end
 
   it 'should return sum of numbers in a string, irrespective of the length of the delimiters' do
