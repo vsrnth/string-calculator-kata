@@ -11,4 +11,7 @@ describe StringCalculator do
   it 'should return sum of the numbers in string, if the numbers in string are separated by comma' do
     expect(calculator.add('1,2,3')).to eq(6)
   end
+  it 'should return sum of the numbers in string, if the numbers in string have new line delimiters' do
+    expect(calculator.add("1\n2,3")).to eq(6)
+  end
 end
