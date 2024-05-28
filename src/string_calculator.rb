@@ -2,7 +2,7 @@
 
 class StringCalculator
   def add(numbers)
-    number_array = numbers.gsub("\n", ",").split(',').map(&:to_i)
-    number_array.sum
+    numbers_array = numbers.scan(/[0-9-]+/).map(&:to_i)
+    numbers_array.reduce(0) { |sum, i| sum + i }
   end
 end
